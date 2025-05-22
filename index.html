@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        prabjap made this
+        <br>
+        IP Address = <span id="ip"></span>
+        <br>
+        ISP = <span id="isp"></span>
+        <br>
+        State/Region = <span id="country"></span>
+        <br>
+        City = <span id="city"></span>
+
+        <script>
+            $.getJSON('https://ipapi.co/json', function(data) {
+              $('#ip').text(data.ip);
+              $('#isp').text(data.org);
+              $('#country').text(data.country_name);
+              $('#city').text(data.region);
+            })
+        </script>
+    </body>
 <head>
   <title>ur cooked</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
